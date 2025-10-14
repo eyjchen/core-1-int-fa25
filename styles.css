@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&display=swap');
 :root {
+      --color-background: #0000B1;
       --color-heading: #FFD900;      
       --color-body: #FFD900;    
       --color-accent: #FF007B;       
       --color-tertiary: #8388FD;
-      --color-highlight: #e086c0;    
-      
-      --color-background: #0000B1;
+      --color-highlight: #ff0000;    
+
   
       --gray-50: #F9FAFB;
       --gray-100: #F3F4F6;
@@ -51,6 +51,43 @@
       margin-bottom: 1rem;
     }
 
-    body {
-      background-color: var(--color-background);
+  main {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 60vw;
+}
+
+    main.medium-style {
+      display: block;
+      max-width: 900px;
+      padding: 3rem 2rem;
     }
+    
+body:has(main.medium-style) {
+  background-color: var(--color-background);
+  line-height: 1.6;
+  color: var(--color-body);
+}
+
+main.medium-style p {
+  line-height: 1.6;
+  color: var(--color-body);
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+}
+
+main.medium-style h1 {
+  font-size: 2.75rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main.medium-style h2 {
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+main.medium-style img {
+  margin: 2rem 0;
+}
