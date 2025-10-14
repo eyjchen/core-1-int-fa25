@@ -73,7 +73,7 @@ main.medium-style p {
   line-height: 1.6;
   color: var(--color-body);
   margin-bottom: 1.5rem;
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 main.medium-style h1 {
