@@ -3,9 +3,9 @@
       --color-background: #0000B1;
       --color-heading: #FFD900;      
       --color-body: #FFD900;    
-      --color-accent: #FF007B;       
+      --color-accent: #080883;       
       --color-tertiary: #8388FD;
-      --color-highlight: #ff0000;    
+      --color-highlight: #FF007B;    
 
   
       --gray-50: #F9FAFB;
@@ -90,4 +90,49 @@ main.medium-style h2 {
 
 main.medium-style img {
   margin: 2rem 0;
+}
+
+::selection {
+  background-color: var(--color-highlight);
+  color: var(--color-body)
+}
+
+
+a {
+  color: var(--color-heading);
+  text-decoration:none;
+}
+
+a:hover {
+  color: var(--color-highlight)
+}
+
+main {
+ width: 80vw;
+ margin: 0 auto;
+ padding: 1rem 2rem 1rem 3rem;
+}
+
+
+h2{
+  min-height: 1000px;
+  border: 1px dashed var(--color-body);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2px;
+  flex-wrap: wrap
+
+}
+
+.box{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  border: 2px dashed var(--color-body);
+  height: 250px;
+  width: 200px;
+  background-color: var(--color-accent);
+  font-size: 15pt;
+
+
 }
