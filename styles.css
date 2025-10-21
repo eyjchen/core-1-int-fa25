@@ -113,12 +113,17 @@ main {
  padding: 1rem 2rem 1rem 3rem;
 }
 
+img {
+  width: auto;
+  height: auto;
+}
 
-h2{
-  min-height: 1000px;
+H3{
+  min-height: 520px;
+  max-width: 1050px;
   border: 1px dashed var(--color-body);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 2px;
   flex-wrap: wrap
 
@@ -133,6 +138,4 @@ h2{
   width: 200px;
   background-color: var(--color-accent);
   font-size: 15pt;
-
-
 }
