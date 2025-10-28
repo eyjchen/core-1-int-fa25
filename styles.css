@@ -118,30 +118,29 @@ img {
   height: auto;
 }
 
-H3{
-  min-height: 800px;
-  max-width: 1500px;
-  border: 1px dashed var(--color-body);
+.character-grid {
+  min-height: 670px;
+  max-width: 228px;
+  margin: auto auto auto 1120px;
+  border: 2px solid var(--color-body);
   display: flex;
   justify-content: space-between;
   align-items: center;
   align-content: center;
-  gap: 2px;
   flex-wrap: wrap;
-
 }
 
 .box{
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border: 2px dashed var(--color-body);
-  height: 250px;
-  width: 200px;
+  border: 2px solid var(--color-body);
+  height: 130px;
+  width: 110px;
   background-color: var(--color-accent);
   font-size: 15pt;
 }
 
 .centered-heading {
-  text-align: center;
+  text-align: center; 
 }
