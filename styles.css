@@ -119,13 +119,15 @@ img {
 }
 
 H3{
-  min-height: 520px;
-  max-width: 1050px;
+  min-height: 800px;
+  max-width: 1500px;
   border: 1px dashed var(--color-body);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  align-content: center;
   gap: 2px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 
 }
 
@@ -138,4 +140,8 @@ H3{
   width: 200px;
   background-color: var(--color-accent);
   font-size: 15pt;
+}
+
+.centered-heading {
+  text-align: center;
 }
