@@ -1,8 +1,8 @@
 // Noise tends to look smoother with coordinates that are very close together
 // These values will be multiplied by the x and y coordinates to make the
 // resulting values very close together
-let xScale = 0.015;
-let yScale = 0.02;
+let xScale = 1.015;
+let yScale = 2.02;
 
 let gapSlider;
 let gap;
@@ -10,7 +10,7 @@ let offsetSlider;
 let offset;
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1200, 800);
 
   // Set up the sliders
   gapSlider = createSlider(2, width / 10, width / 20);
@@ -37,7 +37,7 @@ function checkChanged() {
 function dotGrid() {
   background(255);
   noStroke();
-  fill(0);
+  fill(100);
 
   // Get the current gap and offset values from the sliders
   gap = gapSlider.value();
