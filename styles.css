@@ -123,6 +123,14 @@ img {
   width: auto;
   height: auto;
 }
+.carousel {
+  width: 500px;
+  height: 300px;
+}
+
+
+
+
 
 .character-grid {
   grid-column-start: 5;
