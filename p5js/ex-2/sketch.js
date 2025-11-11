@@ -154,5 +154,5 @@ function draw() {
 
   // add an ellipse using the texture
   // passing a fifth parameter to ellipse for smooth edges in 3D
-  ellipse(260, 0, 200, 200, 100);
+  ellipse(100, 100, 1000, 1000, 100);
 }
