@@ -1,0 +1,17 @@
+
+
+  .parent {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    background-color: rgb(144, 144, 229);
+    border: solid;
+    width: auto;
+    height: 5000px;
+    gap: 30px;
+  }
+
+  .child{
+    display: flex;
+    background-color: blueviolet;
+    border: solid;
+  }

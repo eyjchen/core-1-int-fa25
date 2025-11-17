@@ -65,8 +65,9 @@
 
     main.medium-style {
       display: block;
-      max-width: 850px;
+      max-width: 1000px;
       padding: 3rem 2rem;
+      margin-left: 250px;
     }
     
 body:has(main.medium-style) {
@@ -100,7 +101,7 @@ main.medium-style img {
 
 ::selection {
   background-color: var(--color-highlight);
-  color: var(--color-body)
+  color: var(--color-body);
 }
 
 
@@ -159,11 +160,52 @@ img {
 
 
 
+  .parent {
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    background-color: var(--color-accent);
+    border: solid;
+    width: auto;
+    height: 5000px;
+    gap: 10px;
+  }
+
+
+  .child-content{
+    display: flex;
+    background-color: orangered;
+    border: solid;
+  }
+
+  .child-sidebar{
+    display: flex;
+    background-color: red;
+    border: solid;
+  }
+
+.sticky-sidebar {
+  position: sticky;
+}
+
+
+.sticky-header {
+  display: grid;
+  position: sticky;
+  top: 0; 
+  background-color: var(--color-highlight);
+  width: auto;
+  margin: 0;
+}
+
+
+
+
+
 
 
 body{
   margin: 0;
-  background: #282d34
+  background: var(--color-background);
   color: white;
   font-family: sans-serif;
   display: flex;
@@ -202,7 +244,7 @@ body{
 }
 
 .testimonials .item h1{font-size:114px; color:#E5E7EB;}
-.dots{display: flex; justify content: center; align-items: center;}
+.dots{display: flex; justify-content: center; align-items: center;}
 .dots label{
   height: 5px;
   width: 5px;
