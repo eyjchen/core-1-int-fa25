@@ -59,6 +59,16 @@
       margin-bottom: 1rem;
     }
 
+    h6 {
+      padding:0;
+      margin:0;
+    }
+
+    h2 {
+      margin-top: 20em;
+
+    }
+
   main {
   padding: 0 2rem;
   margin: 0 auto;
@@ -93,7 +103,7 @@ main.medium-style h1 {
 
 main.medium-style h2 {
   font-size: 2rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
   margin-bottom: 1.5rem;
 }
 
@@ -131,11 +141,15 @@ img {
     .header-home {
         grid-area: header;
         width: 100vw;
-        background-color: var(--color-highlight);
-        margin-left: 0;
+        padding: 20px 0 10px 0;
     }
-    .carousel {
-        grid-area: c;
+
+    .header-home H1 {
+      padding-left: 175px;
+    }
+
+    .hover-container {
+        grid-area: hc;
     }
     .character-container {
         grid-area: cg;
@@ -144,11 +158,12 @@ img {
     .home-grid {
         display: grid;
         margin-left: 0;
+        padding-left: 0;
         grid-template-columns: 4fr 1fr; /* Two equal-width columns */
         grid-template-rows: auto 1fr; /* Header row (auto height), content row (fills remaining space) */
         grid-template-areas:
             "header header"
-            "c cg"; 
+            "hc cg"; 
     }
 
 
@@ -190,45 +205,52 @@ img {
 
   .parent {
     display: grid;
-    justify-content: space-between;
-    align-self: center;
     grid-template-columns: 9fr 1fr;
     width: 100vw;
-    height: 100vh;
   }
 
 
   .child-content{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    padding: 15px 150px 15px 150px;
+    padding: 100px 100px 300px 350px;
+
+  }
+
+  #toolkit, #sw, #play, #notes {
+    scroll-margin-top: 200px;
   }
 
   .child-sidebar{
     display: grid;
     width: 25vh;
-    height: 100vh;
+    height: 300px;
     position: -webkit-sticky;
     position: sticky;
     background-color: orangered;
-    top: 0; /* i added this and now the sidebar scrolls below the header*/
+    top: 108.8px; /* i added this and now the sidebar scrolls below the header*/
     padding: 15px 30px 15px 30px;
-    
   }
 
 
 .sticky-header {
   display: grid;
+  position: -webkit-sticky;
   position: sticky;
-  top: 0; 
+  top: 26.92px; 
   background-color: var(--color-highlight);
   width: 100vw;
-  margin: 0;
-  padding: 0 auto 0 30px; /*how to shift header text to the right? padding doesnt work? */
-  z-index: 10; /* i added this and now the sidebar scrolls below the header*/
+  padding-left: px; /*how to shift header text to the right? padding doesnt work? */
 }
 
+.sticky-header h1 {
+  padding-left: 600px;
+}
 
+.home-button {
+  display: grid;
+  position: sticky;
+  top: 0; 
+}
 
 /* copied */
 
