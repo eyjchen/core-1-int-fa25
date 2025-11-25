@@ -59,12 +59,6 @@
       margin-bottom: 1rem;
     }
 
-  main.home-grid {
-  display:grid;
-  grid-template-columns: repeat(5 1fr);
-  width:90vw;
-}
-
   main {
   padding: 0 2rem;
   margin: 0 auto;
@@ -134,8 +128,11 @@ img {
 }
 
 
-    .header {
+    .header-home {
         grid-area: header;
+        width: 100vw;
+        background-color: var(--color-highlight);
+        margin-left: 0;
     }
     .carousel {
         grid-area: c;
@@ -146,7 +143,8 @@ img {
 
     .home-grid {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        margin-left: 0;
+        grid-template-columns: 4fr 1fr; /* Two equal-width columns */
         grid-template-rows: auto 1fr; /* Header row (auto height), content row (fills remaining space) */
         grid-template-areas:
             "header header"
