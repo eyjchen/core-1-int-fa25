@@ -27,6 +27,12 @@
       --breakpoint-md: 768px;
       --breakpoint-lg: 1024px;
     }
+
+    html {
+      padding:0;
+      margin:0;
+
+    }
     
       body {
       font-family: var(--font-body);
@@ -34,6 +40,8 @@
       line-height: 1.6;
       color: var(--color-body);
       background-color: var(--color-background);
+      padding:0;
+      margin:0;
     }
       p {
       font-family: var(--font-body);
@@ -58,16 +66,16 @@
 }
 
   main {
-  padding: 2rem;
+  padding: 0 2rem;
   margin: 0 auto;
-  max-width: 60vw;
+  max-width: 100vw;
 }
 
     main.medium-style {
       display: block;
-      max-width: 1000px;
-      padding: 3rem 2rem;
-      margin-left: 250px;
+      width: 100vw;
+      padding: 0rem 0rem;
+      
     }
     
 body:has(main.medium-style) {
@@ -96,7 +104,7 @@ main.medium-style h2 {
 }
 
 main.medium-style img {
-  margin: 2rem 0;
+  margin: 0;
 }
 
 ::selection {
@@ -117,20 +125,33 @@ a:hover {
 main {
  width: 80vw;
  margin: 0 auto;
- padding: 1rem 2rem 1rem 3rem;
+ padding: 0rem 2rem 1rem 3rem;
 }
 
 img {
   width: auto;
   height: auto;
 }
-.carousel {
-  width: 500px;
-  height: 300px;
-}
 
 
+    .header {
+        grid-area: header;
+    }
+    .carousel {
+        grid-area: c;
+    }
+    .character-container {
+        grid-area: cg;
+    }
 
+    .home-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal-width columns */
+        grid-template-rows: auto 1fr; /* Header row (auto height), content row (fills remaining space) */
+        grid-template-areas:
+            "header header"
+            "c cg"; 
+    }
 
 
 .character-grid {
@@ -155,47 +176,47 @@ img {
   width: 110px;
   background-color: var(--color-accent);
   font-size: 15pt;
+  overflow: hidden;
+  object-fit:fill;
+
+}
+
+.box img { /*how to resize and fit image in box, besides overflow hidden*/
+  width: 100%;
+  height: 200%;
+  object-fit: cover;
 }
 
 
-
+ /* entry pages */
 
   .parent {
     display: grid;
     justify-content: space-between;
+    align-self: center;
     grid-template-columns: 9fr 1fr;
-    background-color: var(--color-accent);
-    border: solid;
-    width: auto;
-    height: 5000px;
-    gap: 10px;
+    width: 100vw;
+    height: 100vh;
   }
 
-when this is flex its weird pic also when this  is added the page looks different no more back ground color 
+
   .child-content{
     display: grid;
-    background-color: orangered;
-    border: solid;
-    padding: 15px;
+    grid-template-columns: 1fr 2fr;
+    padding: 15px 150px 15px 150px;
   }
 
   .child-sidebar{
-    display: flex;
-    background-color: red;
-    border: solid;
+    display: grid;
     width: 25vh;
-    height: 25vh;
+    height: 100vh;
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: orangered;
+    top: 0; /* i added this and now the sidebar scrolls below the header*/
+    padding: 15px 30px 15px 30px;
+    
   }
-
-.sticky-sidebar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-}
-
-
-
-
 
 
 .sticky-header {
@@ -203,11 +224,34 @@ when this is flex its weird pic also when this  is added the page looks differen
   position: sticky;
   top: 0; 
   background-color: var(--color-highlight);
-  width: auto;
+  width: 100vw;
   margin: 0;
+  padding: 0 auto 0 30px; /*how to shift header text to the right? padding doesnt work? */
+  z-index: 10; /* i added this and now the sidebar scrolls below the header*/
 }
 
 
 
+/* copied */
 
+.hover-image {
+  /* Hide the hover image initially */
+  display: none;
+}
 
+.original-image:hover + .hover-image {
+  /* Display the hover image when the original image is hovered */
+  display: inline; /* or block, flex, etc., depending on desired layout */
+  /* Add some margin for spacing next to the original image */
+  margin-left: 10px; 
+}
+
+/* Optional: Add styles to the container and original image */
+.image-container {
+  display: flex; /* Aligns images side-by-side */
+  align-items: center;
+}
+
+.original-image {
+  cursor: pointer; /* Changes cursor to a hand icon on hover */
+}
