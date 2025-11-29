@@ -65,8 +65,12 @@
     }
 
     h2 {
-      margin-top: 20em;
+      margin-top: 15em;
 
+    }
+
+    h5 {
+      margin-top: 4em;
     }
 
   main {
@@ -216,19 +220,30 @@ img {
 
   }
 
+
+  #intro {
+    scroll-margin-top: 500px;
+  }
+
   #toolkit, #sw, #play, #notes {
-    scroll-margin-top: 200px;
+    scroll-margin-top: 240px;
   }
 
   .child-sidebar{
     display: grid;
     width: 25vh;
-    height: 300px;
+    height: 400px;
     position: -webkit-sticky;
     position: sticky;
-    background-color: orangered;
-    top: 108.8px; /* i added this and now the sidebar scrolls below the header*/
+    top: 200px; 
     padding: 15px 30px 15px 30px;
+  }
+
+  .home-button {
+    position: sticky;
+    position: -webkit-sticky;
+    padding-top: 50px;
+    background-color: var(--color-background);
   }
 
 
@@ -236,21 +251,37 @@ img {
   display: grid;
   position: -webkit-sticky;
   position: sticky;
-  top: 26.92px; 
-  background-color: var(--color-highlight);
+  top: 63px; 
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
+  background-color: var(--color-tertiary);
   width: 100vw;
-  padding-left: px; /*how to shift header text to the right? padding doesnt work? */
 }
 
 .sticky-header h1 {
-  padding-left: 600px;
+  padding-left: 350px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 20px;
 }
 
 .home-button {
   display: grid;
   position: sticky;
   top: 0; 
+  padding-left: 350px;
+
+  
 }
+
+
+
+
+
+
+
 
 /* copied */
 
