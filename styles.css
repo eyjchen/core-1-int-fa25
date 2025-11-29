@@ -235,7 +235,7 @@ img {
     height: 400px;
     position: -webkit-sticky;
     position: sticky;
-    top: 200px; 
+    top: 192px; 
     padding: 15px 30px 15px 30px;
   }
 
@@ -255,7 +255,7 @@ img {
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-background);
   width: 100vw;
 }
 
