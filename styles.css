@@ -152,10 +152,10 @@ img {
       padding-left: 175px;
     }
 
-    .hover-container {
-        grid-area: hc;
+    .image-box {
+        grid-area: ib;
     }
-    .character-container {
+    .character-grid {
         grid-area: cg;
     }
 
@@ -167,7 +167,7 @@ img {
         grid-template-rows: auto 1fr; /* Header row (auto height), content row (fills remaining space) */
         grid-template-areas:
             "header header"
-            "hc cg"; 
+            "ib cg"; 
     }
 
 
@@ -184,7 +184,7 @@ img {
   flex-wrap: wrap;
 }
 
-.box{
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10{
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -278,31 +278,5 @@ img {
 
 
 
+/* hover effect*/
 
-
-
-
-
-/* copied */
-
-.hover-image {
-  /* Hide the hover image initially */
-  display: none;
-}
-
-.original-image:hover + .hover-image {
-  /* Display the hover image when the original image is hovered */
-  display: inline; /* or block, flex, etc., depending on desired layout */
-  /* Add some margin for spacing next to the original image */
-  margin-left: 10px; 
-}
-
-/* Optional: Add styles to the container and original image */
-.image-container {
-  display: flex; /* Aligns images side-by-side */
-  align-items: center;
-}
-
-.original-image {
-  cursor: pointer; /* Changes cursor to a hand icon on hover */
-}
