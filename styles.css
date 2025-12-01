@@ -107,7 +107,7 @@ main.medium-style h1 {
 
 main.medium-style h2 {
   font-size: 2rem;
-  margin-top: 10rem;
+  margin-top: 7rem;
   margin-bottom: 1.5rem;
 }
 
@@ -280,3 +280,19 @@ img {
 
 /* hover effect*/
 
+
+
+/*images*/
+.image-gallery {
+    display: grid;
+    /* Defines three columns of equal width */
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: baseline;
+    /* or repeat(3, 1fr); */
+    gap: 10px; /* Space between grid items */
+}
+
+.image-gallery img {
+    width: auto; /* Images fill their grid cell */
+    height: auto;
+}
